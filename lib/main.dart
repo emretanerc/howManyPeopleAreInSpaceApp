@@ -49,11 +49,18 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'people',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
           primarySwatch: Colors.green
       ),
-      home: Scaffold(
-        backgroundColor: const Color(0xFF0D173B),
+    home: Container(
+    decoration: BoxDecoration(
+    image: DecorationImage(
+    image: ExactAssetImage("images/bg.jpg"),
+    fit: BoxFit.cover
+    ),),
+      child: Scaffold(
+        backgroundColor: const Color(0xD173B),
         appBar: AppBar(
           centerTitle: true,
           backgroundColor: const Color(0xFF132255),
@@ -66,11 +73,23 @@ class _HomePageState extends State<HomePage> {
               future: futurePeoples,
               builder: (context, snapshot) {
                 if (snapshot.hasData) {
-                  return Container(
+                 return Column(
+                      children: [
 
-                    child: ListView.builder(
+                      Container(
+                        padding: EdgeInsets.all(100),
+                        child: Text(snapshot.data!.number.toString(),
+                          style: TextStyle(fontSize:100,color: Colors.white)),
+                      ),
+                       
+                Expanded(
+                  
+                child:
+                 ListView.builder(
+
                       scrollDirection: Axis.vertical,
                         shrinkWrap: true,
+
                   itemCount: snapshot.data!.people.length,
                       itemBuilder: (context, index) {
                         return ListTile(
@@ -82,7 +101,7 @@ class _HomePageState extends State<HomePage> {
                             textAlign: TextAlign.center,),
                         );
                       }),
-                  );
+                  )]);
 
                 }
                    else if (snapshot.hasError) {
@@ -95,6 +114,6 @@ class _HomePageState extends State<HomePage> {
               },
             ))
         ),
-      );
+      ));
       }
 }

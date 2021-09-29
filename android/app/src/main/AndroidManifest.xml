@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.etcmobileapps.howmanypeopleareimspacerightnow.howmanypeopleareimspace">
+    package="com.etcmobileapps.howmanypeopleinspacerightnowapp">
    <application
-        android:label="howmanypeopleareimspace"
+        android:label="howmanypeopleinspacerightnowapp"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

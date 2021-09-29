@@ -1,4 +1,4 @@
-package com.etcmobileapps.howmanypeopleareimspacerightnow.howmanypeopleareimspace
+package com.etcmobileapps.howmanypeopleinspacerightnowapp
 
 import io.flutter.embedding.android.FlutterActivity
 

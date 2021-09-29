@@ -1,5 +1,5 @@
-name: howmanypeopleareimspace
-description: howmanypeopleareimspacerightnow android app.
+name: howmanypeopleareinspacerightnow
+description: HowManyPeopleAreInSpace? android app.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -34,11 +34,17 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  url_launcher: ^6.0.12
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: "^0.9.2"
 
+flutter_icons:
+  android: "launcher_icon"
+
+  image_path: "images/icon.png"
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
@@ -60,8 +66,7 @@ flutter:
 
   assets:
     - images/bg.jpg
-
-
+    - images/loading.gif
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg

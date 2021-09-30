@@ -4,7 +4,7 @@
 
 ## Demo
 
-![demo](images/demo.gif)
+![demo](preview.gif)
 
 ## Setup
 
@@ -27,5 +27,9 @@ $ flutter run -v
 ```
 
 
-Preview App
-![](preview.gif)
+
+## Contact
+
+### Let's connect
+
+- Twitter [@emretanerc](https://twitter.com/emretanerc)

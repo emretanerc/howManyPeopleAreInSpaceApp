@@ -167,27 +167,31 @@ class _MainPageState extends State<MainPage> {
                           style: TextStyle(fontSize:100,color: Colors.white)),
                     ),
 
-
-
                     Expanded(
+            child: SizedBox(
+            height: 100.0,
+            child: ListView.builder(
+                        itemCount: snapshot.data!.people.length,
+                        itemBuilder: (context, index) {
+                          return ListTile(
+                            title: Text(
+                              snapshot.data!.people[index].name.toString()+ ' (' + snapshot.data!.people[index].craft +  ')',
+                              style: TextStyle(fontSize:20,color: Colors.white),
+                              textAlign: TextAlign.center,),
+                          );
 
-                      child: ListView.builder(
-                          scrollDirection: Axis.vertical,
-                          shrinkWrap: true,
-                          itemCount: snapshot.data!.people.length,
-                          itemBuilder: (context, index) {
-                            return ListTile(
-                              subtitle: Text(
-                                snapshot.data!.people[index].name +
-                                    ' (' +
-                                    snapshot.data!.people[index].craft +  ')',
-                                style: TextStyle(fontSize:20,color: Colors.white),
-                                textAlign: TextAlign.center,),
-                            );
-                          }),
+                        },
+
+                      ),
                     ),
 
-                  ]);
+
+
+
+
+
+
+                    )]);
 
             }
             else if (snapshot.hasError) {
@@ -342,7 +346,7 @@ class _PhotosPageState extends State<PhotosPage> {
                   children: [
 
               Text(snapshot.data![0].title.toString(),
-              style: titleStyles,),
+              style: titleStyles,textAlign: TextAlign.center,),
 
                     Text('\n Date:' + snapshot.data![0].date.toString(),
                     style: subtitle),

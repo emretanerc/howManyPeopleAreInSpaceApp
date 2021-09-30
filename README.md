@@ -11,7 +11,7 @@
 Clone the repo
 
 ```
-$ git clone https://github.com/mretanerc/howmanypeopleareinspaceApp
+$ git clone https://github.com/emretanerc/howmanypeopleareinspaceApp
 ```
 
 Install dependencies
